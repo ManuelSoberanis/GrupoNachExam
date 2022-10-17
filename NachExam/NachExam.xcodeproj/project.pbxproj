@@ -20,8 +20,6 @@
 		110BDE7F28F87A6C002392EF /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 110BDE7E28F87A6C002392EF /* FirebaseInAppMessagingSwift-Beta */; };
 		110BDE8128F87A6C002392EF /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 110BDE8028F87A6C002392EF /* FirebaseMessaging */; };
 		110BDE8328F87A6C002392EF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 110BDE8228F87A6C002392EF /* FirebaseStorage */; };
-		110BDE8628F87DB4002392EF /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 110BDE8528F87DB4002392EF /* Algorithms */; };
-		110BDE8928F87DED002392EF /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 110BDE8828F87DED002392EF /* Charts */; };
 		112A99D928FBA2F700AED074 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 112A99D828FBA2F700AED074 /* GoogleService-Info.plist */; };
 		112A99DB28FBAC6700AED074 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112A99DA28FBAC6700AED074 /* Colors.xcassets */; };
 		112A99E228FBB21D00AED074 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A99E128FBB21D00AED074 /* MovieListPresenter.swift */; };
@@ -109,13 +107,11 @@
 				110BDE8128F87A6C002392EF /* FirebaseMessaging in Frameworks */,
 				110BDE7328F87A6C002392EF /* FirebaseDatabase in Frameworks */,
 				110BDE7D28F87A6C002392EF /* FirebaseInAppMessaging-Beta in Frameworks */,
-				110BDE8928F87DED002392EF /* Charts in Frameworks */,
 				110BDE7728F87A6C002392EF /* FirebaseFirestore in Frameworks */,
 				110BDE8328F87A6C002392EF /* FirebaseStorage in Frameworks */,
 				110BDE7F28F87A6C002392EF /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				112A99EB28FBBC4000AED074 /* Alamofire in Frameworks */,
 				112A99FB28FBD4B700AED074 /* SDWebImage in Frameworks */,
-				110BDE8628F87DB4002392EF /* Algorithms in Frameworks */,
 				110BDE7928F87A6C002392EF /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,8 +477,6 @@
 				110BDE7E28F87A6C002392EF /* FirebaseInAppMessagingSwift-Beta */,
 				110BDE8028F87A6C002392EF /* FirebaseMessaging */,
 				110BDE8228F87A6C002392EF /* FirebaseStorage */,
-				110BDE8528F87DB4002392EF /* Algorithms */,
-				110BDE8828F87DED002392EF /* Charts */,
 				112A99EA28FBBC4000AED074 /* Alamofire */,
 				112A99FA28FBD4B700AED074 /* SDWebImage */,
 			);
@@ -516,8 +510,6 @@
 			mainGroup = 110BDE4C28F87940002392EF;
 			packageReferences = (
 				110BDE7128F87A6C002392EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				110BDE8428F87DB4002392EF /* XCRemoteSwiftPackageReference "swift-algorithms" */,
-				110BDE8728F87DED002392EF /* XCRemoteSwiftPackageReference "Charts" */,
 				112A99E928FBBC4000AED074 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				112A99F928FBD4B600AED074 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
@@ -648,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -702,7 +694,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -723,11 +715,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NachExam/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requieres the use of the camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -735,9 +730,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.NachExam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -752,11 +750,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NachExam/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requieres the use of the camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,9 +765,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.NachExam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -800,22 +804,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
-			};
-		};
-		110BDE8428F87DB4002392EF /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-algorithms.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		110BDE8728F87DED002392EF /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
 			};
 		};
 		112A99E928FBBC4000AED074 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -881,16 +869,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 110BDE7128F87A6C002392EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
-		};
-		110BDE8528F87DB4002392EF /* Algorithms */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 110BDE8428F87DB4002392EF /* XCRemoteSwiftPackageReference "swift-algorithms" */;
-			productName = Algorithms;
-		};
-		110BDE8828F87DED002392EF /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 110BDE8728F87DED002392EF /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
 		};
 		112A99EA28FBBC4000AED074 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
