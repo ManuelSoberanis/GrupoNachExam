@@ -50,7 +50,8 @@ class HomeViewController: UIViewController {
     var presenter: HomePresenterProtocol?
     weak var image: UIImage?
     private var userName: String?
-
+    var spinner = UIActivityIndicatorView(style: .large)
+    var loadingView: UIView = UIView()
     let headerItems = ["Escribe tu nombre","¡Tómate una selfie!","¡Checa la lista de películas!", "¡Checa el mapa!"]
     
     override func viewDidLoad() {
@@ -66,8 +67,6 @@ class HomeViewController: UIViewController {
       }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-      
         setupSendBtn()
     }
     
@@ -97,9 +96,6 @@ class HomeViewController: UIViewController {
             sendUserDataBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
         ])
     }
-    
-    var spinner = UIActivityIndicatorView(style: .large)
-    var loadingView: UIView = UIView()
     
     func showActivityIndicator() {
         DispatchQueue.main.async {
@@ -132,10 +128,9 @@ class HomeViewController: UIViewController {
     
     func showAlert(){
     
-        let alert = UIAlertController(title: "!Datos enviados!", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "¡Datos enviados!", message: "", preferredStyle: .alert)
     
         let action = UIAlertAction(title: "Ok", style: .default) { action in
-            
         }
         
         alert.addAction(action)
@@ -231,8 +226,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
-        
         switch indexPath.section {
         case 0:
             break
